@@ -39,12 +39,12 @@ export class AppComponent implements OnInit{
   }
   
   getData() {
-    this.http.get<ApiResponse>('http://192.168.1.56:30009/').subscribe(data => {
+    this.http.get<ApiResponse>('http://192.168.80.25:30009/').subscribe(data => {
       this.autor = data.autor;
       this.cantidad = data.cantidad;
       this.suma = data.suma;
     });
-      this.http.get<ApiResponse>('http://192.168.1.56:30010/').subscribe(data => {
+      this.http.get<ApiResponse>('http://192.168.80.25:30010/').subscribe(data => {
       this.autor = data.autor;
       this.name = data.name;
       this.fecha = data.fecha;
